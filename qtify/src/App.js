@@ -3,7 +3,7 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero';
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
 import { Outlet } from 'react-router-dom';
-import { fetchTopAlbums , fetchNewAlbums } from './api/api';
+import { fetchTopAlbums , fetchNewAlbums,fetchSongs } from './api/api';
 import { StyledEngineProvider } from "@mui/material";
 
 
@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     generateData("topAlbums", fetchTopAlbums);
     generateData("newAlbums", fetchNewAlbums);
-    //generateData("songs", fetchSongs);
+    generateData("songs", fetchSongs);
   }, []);
 
   const { topAlbums = [], newAlbums = [], songs = [] } = data;

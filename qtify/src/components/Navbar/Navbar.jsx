@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 function Navbar({ searchData }) {
     return (
         <nav className={styles.navbar}>
-            <Link href="/"> <Logo/>
-            </Link>
+            <a href="/"> <Logo/>
+            </a>
             <Search
                 placeholder={"Search a song of your choice"}
                 searchData={searchData}
